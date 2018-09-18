@@ -16,7 +16,8 @@ spring:
     config:
       server:
         git:
-          uri: https://gitee.com/7040210/SuperBoot.git
+#          uri: https://gitee.com/7040210/SuperBoot.git
+          uri: https://github.com/edgarlau/SuperBoot.git
           # git仓库地址下的相对地址，可以配置多个，用,分割。
           search-paths: client-config
           # git仓库的账号,公开不需要
@@ -28,7 +29,7 @@ spring:
           brokers: 127.0.0.1:9092
           zkNodes: 127.0.0.1:2181
 logging:
-  path: /home/logs
+  path: /logs
 security:
   basic:
     enabled: true

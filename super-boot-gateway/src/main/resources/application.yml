@@ -28,14 +28,17 @@ spring:
     mongodb:
       host: 127.0.0.1
       database: SuperBoot
-  redis:
-    cluster:
-      nodes: 127.0.0.1:7000,127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003,127.0.0.1:7004,127.0.0.1:7005
-    pool:
-      max-idle: 20
-      min-idle: 5
-      max-wait: 10000
-    timeout: 10000
+    redis:
+      host: 127.0.0.1
+      port: 6379
+#  redis:
+#    cluster:
+#      nodes: 127.0.0.1:7000,127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003,127.0.0.1:7004,127.0.0.1:7005
+#    pool:
+#      max-idle: 20
+#      min-idle: 5
+#      max-wait: 10000
+#    timeout: 10000
   jpa:
     properties:
       hibernate:
@@ -49,7 +52,7 @@ spring:
       driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://127.0.0.1:3306/superboot?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&remarks=true&useInformationSchema=true&autoReconnect=true
       username: root
-      password: root
+      password: 123456
       #初始化大小
       initial-size: 5
       min-idle: 5
@@ -77,7 +80,7 @@ spring:
       driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://127.0.0.1:3306/superboot?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&remarks=true&useInformationSchema=true&autoReconnect=true
       username: root
-      password: root
+      password: 123456
       #初始化大小
       initial-size: 5
       min-idle: 5
@@ -154,7 +157,7 @@ endpoints:
     #映射路径
     path: /bye
 logging:
-  path: /home/logs
+  path: /logs
   level:
     cn.phxg: DEBUG
 #配置服务超时时间默认为600秒

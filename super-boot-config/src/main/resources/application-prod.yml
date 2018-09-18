@@ -28,7 +28,7 @@ spring:
           brokers: 127.0.0.1:9092
           zkNodes: 127.0.0.1:2181
 logging:
-  path: /home/logs
+  path: /logs
 security:
   basic:
     enabled: true

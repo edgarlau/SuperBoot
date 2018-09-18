@@ -17,20 +17,23 @@ spring:
     multipart:
       enabled: true
       max-file-size: 1024MB
-  redis:
-    cluster:
-      nodes: 127.0.0.1:7000,127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003,127.0.0.1:7004,127.0.0.1:7005
-    pool:
-      max-active: 100
-      max-wait: 10000
-      max-idle: 20
-      min-idle: 5
-    cache-expire: 1800
-    timeout: 10000
+#  redis:
+#    cluster:
+#      nodes: 127.0.0.1:7000,127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003,127.0.0.1:7004,127.0.0.1:7005
+#    pool:
+#      max-active: 100
+#      max-wait: 10000
+#      max-idle: 20
+#      min-idle: 5
+#    cache-expire: 1800
+#    timeout: 10000
   data:
     mongodb:
       host: 127.0.0.1
       database: SuperBoot
+    redis:
+      host: 127.0.0.1
+      port: 6379
   cloud:
     stream:
       kafka:
@@ -50,7 +53,7 @@ spring:
       driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://127.0.0.1:3306/superboot?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&remarks=true&useInformationSchema=true&autoReconnect=true
       username: root
-      password: root
+      password: 123456
       #初始化大小
       initial-size: 5
       min-idle: 5
@@ -78,7 +81,7 @@ spring:
       driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://127.0.0.1:3306/superboot?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&remarks=true&useInformationSchema=true&autoReconnect=true
       username: root
-      password: root
+      password: 123456
       #初始化大小
       initial-size: 5
       min-idle: 5
@@ -155,7 +158,7 @@ endpoints:
     #映射路径
     path: /bye
 logging:
-  path: /home/logs
+  path: /logs
 #配置服务超时时间默认为60秒
 hystrix:
   command:

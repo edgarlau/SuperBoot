@@ -10,15 +10,15 @@ eureka:
     enable-self-preservation: false
   client:
     #表示是否将自己注册到Eureka Server，默认为true。
-    register-with-eureka: true
+    register-with-eureka: false
     #表示是否从Eureka Server获取注册信息，默认为true
-    fetch-registry: true
+    fetch-registry: false
     #设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。默认是http://localhost:10000/eureka ；多个地址可使用 , 分隔。
     serviceUrl:
       defaultZone: http://admin:superboot.org@localhost:10000/eureka/
     registry-fetch-interval-seconds: 5
 logging:
-  path: /home/logs
+  path: /logs
 #启用安全配置
 security:
   basic:
