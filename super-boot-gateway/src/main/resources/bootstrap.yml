@@ -17,7 +17,7 @@ spring:
   cloud:
     config:
       name: gateway
-      profile: local
+      profile: dev
       label: master
       discovery:
         enabled: true
